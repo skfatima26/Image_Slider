@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Slider</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="slides" style="--img: url('img1.jpg')">
+                <div class="content">
+                    <h2>Slide-1</h2>
+                    <p>Lorem ipsum dolor rror aut inventore. Suscipit, dicta!</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img2.jpg')">
+                <div class="content">
+                    <h2>Slide-2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elitlibero error aut inventore. Suscipit,
+                        dicta!</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img3.jpg')">
+                <div class="content">
+                    <h2>Slide-3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicingut inventore. Suscipit, dicta!</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img4.jpg')">
+                <div class="content">
+                    <h2>Slide-4</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae, inventore.
+                        Suscipit, dicta!</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img5.jpg')">
+                <div class="content">
+                    <h2>Slide-5</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img6.jpg')">
+                <div class="content">
+                    <h2>Slide-6</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.aut inventore. Suscipit, dicta!</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <span class="prev">
+            </span>
+            <span class="next">
+            </span>
+        </div>
+    </div>
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+        next.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        })
+        prev.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length - 1]);
+        }) 
+    </script>
+</body>
+git init
+</html>
